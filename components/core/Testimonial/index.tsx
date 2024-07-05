@@ -270,7 +270,7 @@ export function SocialProofTestimonials() {
             TESTIMONIALS
           </h3>
           <div className="relative mt-6 max-h-[650px] overflow-hidden">
-            <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
+            <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-transparent">
               {Array(Math.ceil(testimonials.length / 3))
                 .fill(0)
                 .map((_, i) => (

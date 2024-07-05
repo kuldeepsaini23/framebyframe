@@ -82,12 +82,12 @@ export function Footer() {
     <footer className="border-t">
       <div className="flex flex-col py-10 md:flex-row md:items-center md:justify-between max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-start justify-start gap-y-5">
-          <a href="#" className="flex items-center gap-x-2.5">
+          <a href="#" className="flex items-center gap-x-1">
             <Image
               width={32}
               height={32}
-              className="h-8 w-8 rounded-md"
-              src="https://magicui.design/icon.png"
+              className="h-10 w-10 rounded-md"
+              src="/logo.svg"
               alt=""
             />
             <h1 className="text-xl font-bold text-neutral-900 dark:text-white">

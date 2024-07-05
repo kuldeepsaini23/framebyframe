@@ -69,7 +69,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width={32} height={32} alt="" src={img} />
+        <Image
+          className="rounded-full"
+          width={32}
+          height={32}
+          alt=""
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -135,8 +141,14 @@ export function CallToAction() {
                 ))}
               </Marquee>
             </div>
-            <div className="z-10 mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
-              <HeartHandshake className="mx-auto size-16 text-black dark:text-white lg:size-24" />
+            <div className="z-10 mx-auto flex justify-center items-center size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md dark:bg-black/10 lg:size-32">
+              <Image
+                src={"/logo.svg"}
+                alt="Frame by Frame"
+                width={40}
+                height={40}
+                className="sm:w-28 sm:h-28 w-20 h-20 object-cover"
+              />
             </div>
             <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
               <h1 className="text-3xl font-bold lg:text-5xl max-w-[520px]">

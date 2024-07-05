@@ -8,6 +8,8 @@ import {
 import { useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Lottie from "react-lottie";
+import animationData from "@/data/confetti.json";
 
 interface Icon {
   icon: JSX.Element;
@@ -64,7 +66,17 @@ export function Footer() {
     // Reset the subscribed status after 2 seconds
     setTimeout(() => {
       setIsSubscribed(false);
-    }, 2000);
+    }, 5000);
+  };
+
+
+  const defaultOptions = {
+    loop: isSubscribed,
+    autoplay: isSubscribed,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   return (
     <footer className="border-t">
@@ -124,9 +136,11 @@ export function Footer() {
                 placeholder="Email Address"
                 required
               />
+              
               <Button variant={"outline"}>
-                {isSubscribed ? "Subscribed" : "Subscribe"}
+                {isSubscribed ? "We will get soon" : "Contact Us"}
               </Button>
+              
             </form>
           </div>
         </div>
@@ -142,6 +156,7 @@ export function Footer() {
           ))}
         </div>
       </div>
+      {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
     </footer>
   );
 }

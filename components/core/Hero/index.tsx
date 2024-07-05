@@ -79,7 +79,7 @@ const Hero = (props: Props) => {
             </div>
             <div className="flex flex-col gap-1 items-start mt-1">
               <p className="font-medium text-sm">⭐⭐⭐⭐⭐</p>
-              <p className="text-white/40 font-medium text-sm">
+              <p className="text-white font-semibold text-sm">
                 200+ Business scaled
               </p>
             </div>

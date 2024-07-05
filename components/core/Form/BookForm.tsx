@@ -15,6 +15,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
+import { useState } from "react";
+import { Loader, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -23,23 +26,58 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Invalid email address.",
   }),
-  phoneNo: z.number(),
+  phoneNo: z.string(),
 });
 
 export function BookForm() {
+  const { reset } = useForm();
+  const { toast } = useToast();
+
+  const [loading, setLoading] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      phoneNo: 0,
+      phoneNo: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      // Do something with the form values.
+      // ✅ This will be type-safe and validated.
+      setLoading(true);
+      const res = await fetch("/api/book-call", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      // Log the response status
+      // console.log("RES: ", res);
+
+      if (res.ok) {
+        toast({ title: "Form submitted successfully." });
+        // Reset the form
+        reset({
+          name: "",
+          email: "",
+          phoneNo: "",
+        });
+      }
+      else{
+        throw new Error("Failed to submit form.");
+      }
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+      toast({ title: "Try again later.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -86,18 +124,17 @@ export function BookForm() {
               <FormControl>
                 <Input placeholder="Enter your Phone No" {...field} />
               </FormControl>
-              <FormDescription>
-                This is optional field.
-              </FormDescription>
+              <FormDescription>This is optional field.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button
           type="submit"
+          disabled={loading}
           className="bg-[#FE4433] text-white hover:bg-red-600 w-full"
         >
-          Submit
+          {loading ? <Loader2 className="animate-spin" /> : "Submit"}
         </Button>
       </form>
     </Form>

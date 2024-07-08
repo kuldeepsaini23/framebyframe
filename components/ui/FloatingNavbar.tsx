@@ -25,7 +25,7 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const { scrollYProgress } = useScroll();
 
   // set true for the initial state so that nav bar is visible in the hero section

@@ -53,7 +53,7 @@ const people = [
 const Hero = (props: Props) => {
   return (
    
-      <div className="w-full pb-20 sm:pt-40 pt-10 relative">
+      <div className="w-full pb-20 sm:pt-40 pt-28 relative">
         {/* Radial gradient for the container to give a faded look */}
       
         <div className="w-full flex gap-8 md:justify-between flex-col md:flex-row sm:px-10 px-5 max-w-7xl mx-auto">
@@ -74,12 +74,12 @@ const Hero = (props: Props) => {
 
             {/* Heading */}
             <WordPullUp
-              className="text-[#FCFCFA] text-5xl font-bold text-left z-20"
+              className="text-[#FCFCFA] text-5xl font-bold text-left"
               words="Elevate your brand with stunning videos."
             />
 
             <FadeText
-              className="text-[#D4D4D4] font-semibold text-[1.5rem] leading-9 z-20"
+              className="text-[#D4D4D4] font-semibold text-[1.5rem] leading-9"
               direction="right"
               framerProps={{
                 show: { transition: { delay: 0.2 } },

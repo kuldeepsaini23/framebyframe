@@ -37,14 +37,14 @@ const DetailSection = (props: Props) => {
         {socialMedia?.map((item, index) => (
           <ShimmerButton
             key={index}
-            className="p-6 flex flex-col items-center justify-center gap-1 rounded-xl border border-[rgba(255,255,255,0.32)]"
+            className="p-6 flex flex-col items-center justify-center gap-1 rounded-xl px-10 border border-[rgba(255,255,255,0.32)]"
           >
             <p className="text-3xl sm:text-6xl font-semibold text-white">
               <NumberTicker value={item?.SocialMediaCount} />
               {item.PrefixAfterCount}
             </p>
             <div
-              className="text-base sm:text-2xl font-normal text-shark-300 hover:text-brand hover:underline"
+              className="text-base sm:text-xl font-normal text-shark-300 hover:text-brand hover:underline text-white"
             >
               {item.BottomText}
             </div>

@@ -105,7 +105,7 @@ export const FloatingNav = ({
         </motion.div>
       </AnimatePresence>
 
-      <div className="w-full sm:hidden flex justify-between px-4 py-2 border-b border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] relative">
+      <div className="w-full fixed sm:hidden flex justify-between px-4 py-2 border-b border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-10 bg-black/80 ">
         <Link href={"/"}>
           <Image
             src={"/logo.svg"}
@@ -116,7 +116,7 @@ export const FloatingNav = ({
         </Link>
         <Hamburger open={open} setOpen={setOpen} />
         <div
-          className={`animate__animated animate__fadeIn animate__faster absolute top-full left-0 right-0 z-[100] backdrop-blur-lg pt-6 pb-[8vh] font-rubik sm:hidden  ${
+          className={`animate__animated animate__fadeIn animate__faster absolute top-full left-0 right-0 z-[100] backdrop-blur-lg pt-6 pb-[8vh] font-rubik sm:hidden ${
             open
               ? "opacity-1 pointer-events-auto visible"
               : "pointer-events-none hidden opacity-0"

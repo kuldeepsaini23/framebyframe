@@ -5,14 +5,11 @@ import Hero from "@/components/core/Hero";
 import MarqueeDemo from "@/components/core/ProjectDisplay/Projects";
 import {
   SocialProofTestimonials,
-  TestimonialCard,
 } from "@/components/core/Testimonial";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import { Metadata, ResolvingMetadata } from "next";
-
-
 
 type Props = {
   params: { slug: string };
@@ -23,50 +20,55 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-
   // optionally access and extend (rather than replace) parent metadata
   return {
-    metadataBase: new URL(process.env.SITE_URL || "https://www.framebyframe.media"),
+    metadataBase: new URL(
+      process.env.SITE_URL || "https://www.framebyframe.media"
+    ),
     title: `Video Production Company | FramebyFrame`,
     description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!}`,
-    keywords:["FramebyFrame","Editor"],
+    keywords: ["FramebyFrame", "Editor"],
     openGraph: {
-      images: '',
-      title:`Video Production Company | FramebyFrame`,
-      description:
-      `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
-     
+      images: "",
+      title: `Video Production Company | FramebyFrame`,
+      description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
+
       // type: `${courseData?.attributes?.seo?.OgMetaType}`,
       type: "website",
       siteName: "FramebyFrame",
     },
     twitter: {
-      title:`Video Production Company | FramebyFrame`,
-      description:
-      `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
+      title: `Video Production Company | FramebyFrame`,
+      description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
       // card: `${courseData?.attributes?.seo?.TwitterMetaCard}`,
       card: "summary_large_image",
-      images: '',
+      images: "",
       site: "FramebyFrame",
-    }
-  }
+    },
+  };
 }
 
-
 export default function Home() {
+
   return (
     <main className="relative bg-black flex justify-center items-center flex-col mx-auto min-h-screen overflow-clip">
       <div className="w-full">
         <FloatingNav navItems={navItems} />
+
+        
         <Hero />
-        <div className="sm:px-10 px-5 max-w-7xl w-full mx-auto my-10">
+       
+        <div
+          className="sm:px-10 px-5 max-w-7xl w-full mx-auto my-10"
+          id="about"
+        >
           <DetailSection />
         </div>
         <MarqueeDemo />
         <SocialProofTestimonials />
         <FAQ />
-        <CallToAction/>
-        <Footer/>
+        <CallToAction />
+        <Footer />
       </div>
     </main>
   );

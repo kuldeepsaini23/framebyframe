@@ -19,6 +19,10 @@ const nextConfig = {
       {
         protocol:"https",
         hostname:"magicui.design"
+      },
+      {
+        protocol:"https",
+        hostname:"i.ibb.co"
       }
     ],
   },

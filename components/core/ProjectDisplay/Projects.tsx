@@ -5,27 +5,27 @@ const firstRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/0pUYTZ-fGnk"
         title="A sdimple talking head video with captions and icons"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         loading="lazy"
-        className="rounded-lg"
+        className="rounded-lg object-cover"
       ></iframe>
     ),
   },
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/JGX3q79sK7k"
         title="Collage style video for Thebusinessguy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -33,13 +33,13 @@ const firstRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/-GI-zMh45Cs"
         title="Collage video | Sahil Bloom"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -47,27 +47,28 @@ const firstRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/Ane-xIqFWvI"
         title="A collage style video for Justin Scott #shorts"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
   },
+
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
-        src="https://www.youtube.com/embed/SivMVO-8bTU"
+        width="283"
+        height="523"
+        src="https://youtube.com/shorts/dy5gc87Bz9E?feature=share"
         title="Utilise mornings | framebyframemedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -84,7 +85,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -98,7 +99,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -112,7 +113,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -126,7 +127,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -140,7 +141,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -154,7 +155,7 @@ const secondRowData = [
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -164,7 +165,7 @@ const secondRowData = [
       <iframe
         width="560"
         height="315"
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         src="https://www.youtube.com/embed/RTrKmDcTWn8?si=PfPTptgejA-nmUrc"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -179,13 +180,27 @@ const thirdRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
+        src="https://www.youtube.com/embed/SivMVO-8bTU"
+        title="Utilise mornings | framebyframemedia"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="rounded-lg object-cover"
+        loading="lazy"
+      ></iframe>
+    ),
+  },
+  {
+    iFrame: (
+      <iframe
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/oogw69EuV5M"
         title="Short animated Reel for Dankoe | framebyframemedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -193,13 +208,13 @@ const thirdRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/JD-Q6JqZT_M"
         title="Stop scrolling and Start posting | framebyframe media"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -207,13 +222,13 @@ const thirdRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/BBxMGrntNlY"
         title="Focus on your niche | framebyframemedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -221,13 +236,13 @@ const thirdRowData = [
   {
     iFrame: (
       <iframe
-        width="263"
-        height="423"
+        width="283"
+        height="523"
         src="https://www.youtube.com/embed/NPfM4qNfSIc"
         title="Short animated videos | framebyframemedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-        className="rounded-lg"
+        className="rounded-lg object-cover"
         loading="lazy"
       ></iframe>
     ),
@@ -235,18 +250,22 @@ const thirdRowData = [
 ];
 
 const ReviewCard = ({ iFrame }: { iFrame: React.ReactNode }) => {
-  return <div className="rounded-lg"> {iFrame}</div>;
+  return (
+    <div className="rounded-lg object-cover">
+      {iFrame} 
+    </div>
+  );
 };
 
 const MarqueeDemo = () => {
   return (
-    <div className="relative flex h-full w-full flex-col gap-y-20 items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl">
+    <div className="relative flex h-full w-full flex-col gap-y-20 items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl" id="portfolio">
       <Marquee pauseOnHover className="[--duration:30s]">
         {firstRowData.map((review, idx) => (
           <ReviewCard key={idx} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:60s]">
+      <Marquee reverse pauseOnHover className="[--duration:80s]">
         {secondRowData.map((review, idx) => (
           <ReviewCard key={idx} {...review} />
         ))}

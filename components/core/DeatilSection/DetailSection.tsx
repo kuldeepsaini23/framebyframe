@@ -1,4 +1,6 @@
 import HiglightedCard from "@/components/common/HighlightedCard";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import { BorderBeam } from "@/components/ui/border-beam";
 import NumberTicker from "@/components/ui/number-ticker";
 import Link from "next/link";
 import React from "react";
@@ -7,29 +9,23 @@ type Props = {};
 
 const socialMedia = [
   {
-    SocialMediaCount: 100,
+    SocialMediaCount: 200,
     PrefixAfterCount: "+",
-    SocialMediaLink: "https://www.instagram.com/",
-    BottomText: "Instagram",
+    // SocialMediaLink: "https://www.instagram.com/",
+    BottomText: "Projects",
   },
 
   {
-    SocialMediaCount: 1000,
-    PrefixAfterCount: "+",
-    SocialMediaLink: "https://www.instagram.com/",
-    BottomText: "Instagram",
+    SocialMediaCount: 5,
+    PrefixAfterCount: "M+",
+    // SocialMediaLink: "https://www.instagram.com/",
+    BottomText: "Account Reached",
   },
   {
     SocialMediaCount: 100,
-    PrefixAfterCount: "+",
-    SocialMediaLink: "https://www.instagram.com/",
-    BottomText: "Instagram",
-  },
-  {
-    SocialMediaCount: 9000,
-    PrefixAfterCount: "+",
-    SocialMediaLink: "https://www.instagram.com/",
-    BottomText: "Instagram",
+    PrefixAfterCount: "M+",
+    // SocialMediaLink: "https://www.instagram.com/",
+    BottomText: "Views",
   },
 ];
 
@@ -39,24 +35,24 @@ const DetailSection = (props: Props) => {
       {/* Cards */}
       <div className="flex justify-center items-center gap-6 flex-wrap py-20">
         {socialMedia?.map((item, index) => (
-          <div
+          <ShimmerButton
             key={index}
-            className="p-6 flex flex-col items-center gap-1 rounded-xl border border-[rgba(255,255,255,0.32)]"
+            className="p-6 flex flex-col items-center justify-center gap-1 rounded-xl border border-[rgba(255,255,255,0.32)]"
           >
-            <p className="text-3xl font-semibold text-white">
+            <p className="text-3xl sm:text-6xl font-semibold text-white">
               <NumberTicker value={item?.SocialMediaCount} />
               {item.PrefixAfterCount}
             </p>
-            <Link
-              href={item.SocialMediaLink || "/"}
-              target="_blank"
-              className="text-base font-normal text-shark-300 hover:text-brand hover:underline"
+            <div
+              className="text-base sm:text-2xl font-normal text-shark-300 hover:text-brand hover:underline"
             >
               {item.BottomText}
-            </Link>
-          </div>
+            </div>
+           
+          </ShimmerButton>
         ))}
       </div>
+      
     </HiglightedCard>
   );
 };

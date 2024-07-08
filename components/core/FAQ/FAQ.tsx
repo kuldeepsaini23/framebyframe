@@ -12,73 +12,57 @@ const faqs = [
     section: "General",
     qa: [
       {
-        question: "What is Magic UI?",
+        question: "Why wouldn't I just hire a full-time designer?",
         answer: (
           <span>
-            Magic UI is a React-based UI library designed to help developers
-            build beautiful and interactive user interfaces with ease. It offers
-            a wide range of customizable components.
+           {`Good question. For starters, the annual cost of a full-time senior-level designer is around $100,000 plus benefits. (And trying to find one available is a hassle in itself.) Aside from that, you may not always have enough work to keep them busy all the time, so you;re stuck paying for time you aren't able to utilize.   With the monthly plan, you can pause and resume your subscription as often as you need to ensure you're only paying your designer when you have work available for them.`}
           </span>
         ),
       },
       {
-        question: "How can I get started with Magic UI?",
+        question: "Is there a limit to how many requests I can have?",
         answer: (
           <span>
-            To get started, install the Magic UI package in your React project
-            using your package manager. Explore our documentation for guides on
-            using components and customizing your UI.
+           {`Nope! When we say unlimited, we mean unlimited. Once you've susbcribed, you can add as many design requests to your queue as you'd like and they'll be delivered one by one.`} 
+          </span>
+        ),
+      },
+      {
+        question: "How fast will I receive my designs?",
+        answer: (
+          <span>
+           {`On average, most requests are completed in 2-3 days. However, mroe complex requests can take longer.`} 
+          </span>
+        ),
+      },
+      {
+        question: "Who are the designers?",
+        answer: (
+          <span>
+           {`You'll be working directly with me, Hamza Ehsan, founder of Productize. However, special requests such as animations or custom illustrations are provided by partner designers.`} 
+          </span>
+        ),
+      },
+      {
+        question: "What if I don't like the design?",
+        answer: (
+          <span>
+           {`No worries! We'll continue to revise the design until you're 100% satisfied.`} 
+          </span>
+        ),
+      },
+      {
+        question: "Are there any refunds if I don't like the service?",
+        answer: (
+          <span>
+           {`Due to the high-quality nature of the work, there will be no refunds issued.`} 
           </span>
         ),
       },
     ],
   },
-  {
-    section: "Support",
-    qa: [
-      {
-        question: "Does Magic UI offer technical support?",
-        answer: (
-          <span>
-            While Magic UI is primarily a self-serve library, we provide
-            extensive documentation and a community forum where you can ask
-            questions and share insights with other developers.
-          </span>
-        ),
-      },
-    ],
-  },
-  {
-    section: "Customization",
-    qa: [
-      {
-        question: "Can I customize Magic UI components?",
-        answer: (
-          <span>
-            Absolutely! Magic UI is built with customization in mind. You can
-            easily override styles and behaviors of components to match your
-            design requirements.
-          </span>
-        ),
-      },
-    ],
-  },
-  {
-    section: "Integration",
-    qa: [
-      {
-        question: "How do I integrate Magic UI with my existing project?",
-        answer: (
-          <span>
-            Magic UI can be integrated into any React project. Simply install
-            the library, import the components you need, and start using them in
-            your project. Our documentation provides detailed instructions for
-            integration.
-          </span>
-        ),
-      },
-    ],
-  },
+
+
 ];
 
 export function FAQ() {
@@ -101,9 +85,9 @@ export function FAQ() {
           <div className="container mx-auto my-12 space-y-12 px-10">
             {faqs.map((faq, idx) => (
               <section key={idx} id={"faq-" + faq.section}>
-                <h2 className="mb-4 text-left text-base font-semibold tracking-tight text-foreground/60">
+                {/* <h2 className="mb-4 text-left text-lg font-semibold tracking-tight text-foreground/60">
                   {faq.section}
-                </h2>
+                </h2> */}
                 <Accordion
                   type="single"
                   collapsible
@@ -115,8 +99,8 @@ export function FAQ() {
                       value={faq.question}
                       className="w-full "
                     >
-                      <AccordionTrigger>{faq.question}</AccordionTrigger>
-                      <AccordionContent>{faq.answer}</AccordionContent>
+                      <AccordionTrigger className="text-lg">{faq.question}</AccordionTrigger>
+                      <AccordionContent className="text-lg">{faq.answer}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
@@ -125,8 +109,8 @@ export function FAQ() {
           </div>
           <h4 className="mb-12 text-center text-sm font-medium tracking-tight text-foreground/80">
             Still have questions? Email us at{" "}
-            <a href="mailto:support@example.com" className="underline">
-              support@example.com
+            <a href="mailto:contact@framebyframe.media" className="underline">
+              contact@framebyframe.media
             </a>
           </h4>
         </div>

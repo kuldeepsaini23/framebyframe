@@ -84,3 +84,7 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+.grad{
+  background: radial-gradient(#ee6f07, #ffffff);
+}

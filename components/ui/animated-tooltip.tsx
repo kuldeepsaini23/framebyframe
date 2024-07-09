@@ -92,7 +92,7 @@ export const AnimatedTooltip = ({
                 width={90}
                 src={item.image}
                 alt={item.name}
-                className={`object-cover !m-0 !p-0 object-top rounded-full w-10 h-10 border-2   group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500 ${imgClass} ${item.imageClassName}`}
+                className={`object-cover !m-0 !p-0 object-top rounded-full w-10 h-10 sm:h-12 sm:w-12 border-2   group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500 ${imgClass} ${item.imageClassName}`}
                 priority
                 placeholder="blur"
                 blurDataURL={item.image}

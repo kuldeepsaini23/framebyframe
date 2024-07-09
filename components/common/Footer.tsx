@@ -100,7 +100,7 @@ export function Footer() {
               alt=""
             />
             <h1 className="text-xl font-bold text-neutral-900 dark:text-white">
-              Frame By Frame
+              FrameByFrame
             </h1>
           </a>
           <p className="tracking-tight text-neutral-900 dark:text-white">

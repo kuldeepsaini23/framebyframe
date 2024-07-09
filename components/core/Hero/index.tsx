@@ -16,37 +16,42 @@ const people = [
     name: "John Doe",
     designation: "Software Engineer",
     image: "https://i.ibb.co/2cktS8x/channels4-profile-1.jpg",
+    link:""
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Dankoe",
+    designation: "Writer",
     image: "https://i.ibb.co/rt6fqct/channels4-profile.jpg",
+    link:"https://www.instagram.com/thedankoe"
   },
   {
     id: 3,
-    name: "Jane Smith",
+    name: "Justin Scott",
     designation: "Data Scientist",
     image: "https://i.ibb.co/r3r3t4c/download.jpg",
+    link:"https://www.instagram.com/iamjustincscott?igsh=ajJjd2Q4N2p1b2Ru"
   },
   {
     id: 4,
-    name: "Emily Davis",
+    name: "Sahil bloom",
     designation: "UX Designer",
     image: "https://i.ibb.co/X7MKLXP/V1-HRpb-P1-400x400.jpg",
   },
   {
     id: 5,
-    name: "Tyler Durden",
+    name: "Project Kim",
     designation: "Soap Developer",
     image: "https://i.ibb.co/SKQCp3h/images.jpg",
+    link:"https://www.instagram.com/projectkim?igsh=MXdzejJjc3hvajBqZg=="
   },
   {
     id: 6,
-    name: "Dora",
+    name: "Sveni Studios",
     designation: "The Explorer",
     image:
       "https://i.ibb.co/j44xx1R/T030-SSUEJHG-U030-V6-BGW20-8b2aa1895120-512.png",
+      link:"https://www.svenistudios.com/"
   },
 ];
 

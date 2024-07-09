@@ -9,7 +9,7 @@ type Props = {};
 
 const socialMedia = [
   {
-    SocialMediaCount: 200,
+    SocialMediaCount: 500,
     PrefixAfterCount: "+",
     // SocialMediaLink: "https://www.instagram.com/",
     BottomText: "Projects",

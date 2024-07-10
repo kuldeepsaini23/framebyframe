@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     
         await transporter.sendMail({
           from: `FrameByFrame <${process.env.EMAIL_FRAME3}>`,
-          to: [
+          to: [ 
             
             `${body.email}`,
           ],

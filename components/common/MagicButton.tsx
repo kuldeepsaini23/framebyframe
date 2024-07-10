@@ -25,21 +25,21 @@ const MagicButton = ({
 }) => {
   return (
     <button
-      className={`relative inline-flex w-28 sm:w-32 h-9 overflow-hidden rounded-lg p-[1px] focus:outline-none ${divClassName}`}
-      // onClick={handleClick}
-    >
-      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FE4433_0%,#FEE6CE_50%,#FE4433_100%)]" />
+  className={`relative inline-flex w-28 sm:w-32 h-9 overflow-hidden rounded-lg p-[1px] focus:outline-none ${divClassName}`}
+  // onClick={handleClick}
+>
+  <span className="absolute inset-0 -m-[1000%] animate-spin bg-[conic-gradient(from_90deg_at_50%_50%,#FE4433_0%,#FEE6CE_50%,#FE4433_100%)]" />
 
-      {/* remove px-3 py-1, add px-5 gap-2 */}
-      <span
-        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg
-             bg-slate-950 px-0 text-sm font-medium text-white backdrop-blur-3xl gap-4 ${otherClasses}`}
-      >
-        {position === "left" && icon}
-        {title}
-        {position === "right" && icon}
-      </span>
-    </button>
+  {/* remove px-3 py-1, add px-5 gap-2 */}
+  <span
+    className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-0 text-sm font-medium text-white backdrop-blur-3xl gap-4 ${otherClasses}`}
+  >
+    {position === "left" && icon}
+    {title}
+    {position === "right" && icon}
+  </span>
+</button>
+
   );
 };
 

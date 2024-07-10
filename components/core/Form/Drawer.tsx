@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,6 +15,7 @@ import { BookForm } from "./BookForm";
 import MagicButton from "@/components/common/MagicButton";
 
 export function BookCall({ nav = false }: { nav?: boolean }) {
+  console.log(window.navigator.userAgent)
   return (
     <Drawer>
       <DrawerTrigger asChild>

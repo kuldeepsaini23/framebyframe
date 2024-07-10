@@ -67,7 +67,6 @@ To ensure we can respond to you in the most convenient way, please let us know y
       to: [
         `<${process.env.EMAIL_FRAME1}>,
   <${process.env.EMAIL_FRAME2}>`,
-        "techbro2311@gmail.com",
       ],
       subject: `A new Client Reach out to us`,
       html: clientDetails.replace(/\r\n/g, "<br>"),

@@ -149,7 +149,20 @@ export function Footer() {
             ))}
 
             <div className="flex flex-col gap-y-1">
+              <div className="flex gap-x-4 justify-between">
               <p className="text-lg font-bold">Contact us</p>
+              <div className="flex items-center gap-4">
+              {icons.map((icon, index) => (
+                <a
+                  key={index}
+                  href={icon.url}
+                  className="text-base text-neutral-500 hover:text-neutral-900 hover:dark:text-white"
+                >
+                  {icon.icon}
+                </a>
+              ))}
+            </div>
+              </div>
               <p className="font-normal text-neutral-500 dark:font-medium">
                 We have a great support team to help you
               </p>
@@ -168,23 +181,13 @@ export function Footer() {
                   />
 
                   <Button variant={"outline"} disabled={!canSubmit}>
-                    {isSubscribed ? "We will get back to you soon" : "Contact Us"}
+                    {isSubscribed ? "We will get back soon" : "Contact Us"}
                   </Button>
                 </form>
               </div>
             </div>
 
-            <div className="flex items-center sm:flex-col gap-4">
-              {icons.map((icon, index) => (
-                <a
-                  key={index}
-                  href={icon.url}
-                  className="text-xl text-neutral-500 hover:text-neutral-900 hover:dark:text-white"
-                >
-                  {icon.icon}
-                </a>
-              ))}
-            </div>
+         
           </div>
         </div>
       </div>

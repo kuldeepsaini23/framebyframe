@@ -14,7 +14,7 @@ import {
 import { BookForm } from "./BookForm";
 import MagicButton from "@/components/common/MagicButton";
 
-export function BookCall({ nav = false }: { nav?: boolean }) {
+export function BookCall({ nav = true }: { nav?: boolean }) {
   return (
     <Drawer>
       <DrawerTrigger asChild>

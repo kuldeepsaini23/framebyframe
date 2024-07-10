@@ -16,7 +16,7 @@ To ensure we can respond to you in the most convenient way, please let us know y
       <li><b>Mobile Number:</b> ${body.phoneNo}</li>
     </ul>
     <p>Thank you for reaching out to us. We look forward to speaking with you.</p>
-    <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.EMAIL_CONTACT}'>${process.env.EMAIL_CONTACT}</a></b></code>
+    <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.MAIL_USER}'>${process.env.MAIL_USER}</a></b></code>
   `;
 
   const clientDetails = `
@@ -66,7 +66,7 @@ To ensure we can respond to you in the most convenient way, please let us know y
       from: `FrameByFrame <${process.env.MAIL_USER}>`,
       to: [
         `<${process.env.EMAIL_FRAME1}>,
-  <${process.env.EMAIL_FRAME2}>`,
+  <${process.env.MAIL_USER}>`,
       ],
       subject: `A new Client Reach out to us`,
       html: clientDetails.replace(/\r\n/g, "<br>"),

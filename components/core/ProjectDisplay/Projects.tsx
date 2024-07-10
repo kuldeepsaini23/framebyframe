@@ -80,7 +80,7 @@ const firstRowData = [
       <iframe
         width="283"
         height="523"
-        src="https://www.youtube.com/embed/Ane-xIqFWvI"
+        src="https://www.youtube.com/embed/BBxMGrntNlY"
         title="Utilise mornings | framebyframemedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -92,20 +92,7 @@ const firstRowData = [
 ];
 
 const secondRowData = [
-  {
-    iFrame: (
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/TO29T2OJ_as?si=ZmzJemPnObPSE_s-"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="rounded-lg object-cover w-[300px] h-[200px] sm:w-[560px] sm:h-[315px]"
-        loading="lazy"
-      ></iframe>
-    ),
-  },
+ 
   {
     iFrame: (
       <iframe
@@ -140,6 +127,20 @@ const secondRowData = [
         width="560"
         height="315"
         src="https://www.youtube.com/embed/PEC7s_K2diI?si=MpZJb-VJAqa3Pum0"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="rounded-lg object-cover w-[300px] h-[200px] sm:w-[560px] sm:h-[315px]"
+        loading="lazy"
+      ></iframe>
+    ),
+  },
+  {
+    iFrame: (
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/TO29T2OJ_as?si=ZmzJemPnObPSE_s-"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -318,11 +319,7 @@ const MarqueeDemo = () => {
       id="portfolio"
     >
       <Link href={"https://www.youtube.com/channel/UCuDLpr96vn9PI7_eYzjTy1A"} target="_blank">
-      <MagicButton
-      title="Portfolio"
-      otherClasses="sm:text-xl text-base"
-      divClassName="sm:h-12 sm:w-36"
-     />
+      <Button className="text-3xl !font-normal p-8 text-white hover:bg-[#ff4a3a] rounded-2xl border-white-100" variant={"outline"}>Portfolio</Button>
       </Link>
      
       <Marquee pauseOnHover className="[--duration:30s]">

@@ -3,10 +3,11 @@ import { createTransport } from "nodemailer";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  console.log("Body: ", body);
   const clientDetails = `
     <h3>Contact Details of Client:</h3>
     <ul>
-      <li><b>Email:</b> ${body}</li>
+      <li><b>Email:</b> ${body.email}</li>
     </ul>
    
   `;
@@ -17,7 +18,7 @@ export async function POST(req: NextRequest) {
 To ensure we can respond to you in the most convenient way, please let us know your preferred platform for communication. Whether it's WhatsApp, email, phone call, or any other platform, please provide the relevant contact details.</p>
 
   <p>Thank you for reaching out to us. We look forward to speaking with you.</p>
-  <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.EMAIL_CONTACT}'>${process.env.EMAIL_CONTACT}</a></b></code>
+  <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.MAIL_USER}'>${process.env.MAIL_USER}</a></b></code>
 `;
 
   try {
@@ -32,7 +33,7 @@ To ensure we can respond to you in the most convenient way, please let us know y
 
     await transporter.sendMail({
       from: `FrameByFrame <${process.env.MAIL_USER}>`,
-      to: [`${body}`],
+      to: [`${body.email}`],
       subject: `Thank You for Reaching Out!`,
       html: message.replace(/\r\n/g, "<br>"),
     });
@@ -58,7 +59,7 @@ To ensure we can respond to you in the most convenient way, please let us know y
       from: `FrameByFrame <${process.env.MAIL_USER}>`,
       to: [
         `<${process.env.EMAIL_FRAME1}>,
-<${process.env.EMAIL_FRAME2}>`,
+<${process.env.MAIL_USER}>`,
       ],
       subject: `A new Client Reach out to us through contact us`,
       html: clientDetails.replace(/\r\n/g, "<br>"),

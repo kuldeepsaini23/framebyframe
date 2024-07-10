@@ -19,7 +19,7 @@ interface Icon {
 const icons: Icon[] = [
   {
     icon: <InstagramLogoIcon width={30} height={30} />,
-    url: "https://www.instagram.com",
+    url: "https://www.instagram.com/framebyframe_media",
   },
   {
     icon: <LinkedInLogoIcon width={30} height={30} />,

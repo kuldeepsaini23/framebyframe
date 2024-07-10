@@ -87,9 +87,9 @@ const testimonials = [
     description: (
       <p>
         I asked for several revisions,
-        <Highlight>I had specific criteria and he met them.</Highlight> This is
-        exactly the kind of behavior I expect from someone serious and
-        professional. I recommend him.
+        <Highlight>I had specific criteria and they met them.</Highlight> This
+        is exactly the kind of behavior I expect from someone serious and
+        professional. I recommend them.
       </p>
     ),
   },
@@ -100,16 +100,16 @@ const testimonials = [
     description: (
       <p>
         {`Really satisfied and surprised with the result.`}
-        <Highlight>Mashab is a really expert creator.</Highlight> Highly Just a
-        few questions, a quick chat and he delivered a piece of art in just a
-        few days. More than recommended, smart and skilled.
+        <Highlight>FramebyFrame is a really expert creator.</Highlight> Highly
+        Just a few questions, a quick chat and they delivered a piece of art in
+        just a few days. More than recommended, smart and skilled.
       </p>
     ),
   },
   {
     name: "Raj Patel",
     role: " United States",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=RP",
     description: (
       <p>
         {`As a startup, we need to move fast and stay ahead. #framebyframe helps us do just that.`}
@@ -125,8 +125,8 @@ const testimonials = [
     description: (
       <p>
         {` I'm really satisfied with the overall experience and final product. I created the script and a quick storyboard and they hopped on a call to walk through it with me to ensure he understood the work. They took my feedback well and when I needed revisions but wasn't sure how to bring my vision to life,`}
-        <Highlight>I gave him creative reign and he was awesome.</Highlight> A I
-        had a tight timeline and worked with me to try and achieve it. My
+        <Highlight>I gave him creative reign and they was awesome.</Highlight> A
+        I had a tight timeline and worked with me to try and achieve it. My
         clients are thrilled with the results and so am I. I will definitely
         work with him again!
       </p>
@@ -138,7 +138,7 @@ const testimonials = [
     img: "https://i.ibb.co/M255KD8/image.png",
     description: (
       <p>
-        {`Excellent work. I enjoyed the opportunity to work with Framebyframe. They asked great questions and really understood what we were trying to create. They took feedback well and challenged us where he had conviction, which we appreciated. The work was done on time and the final product was excellent. We will work with him again.`}
+        {`Excellent work. I enjoyed the opportunity to work with FramebyFrame. They asked great questions and really understood what we were trying to create. They took feedback well and challenged us where he had conviction, which we appreciated. The work was done on time and the final product was excellent. We will work with him again.`}
         <Highlight>
           Our investment strategies are now powered by real-time data analytics.
         </Highlight>{" "}
@@ -177,9 +177,9 @@ const testimonials = [
     ),
   },
   {
-    name: "St_imagine",
-    role: "Canada",
-    img: "https://api.dicebear.com/9.x/initials/svg?seed=St",
+    name: "Business Guy",
+    role: "Entrepreneur",
+    img: "https://i.ibb.co/7VZRJCq/channels4-profile.jpg",
     description: (
       <p>
         {`FramebyFrame is prompt in communication and skilled in animation. The work that they did was fantastic and really captured the feeling of the video we were trying to create.`}
@@ -208,52 +208,56 @@ const testimonials = [
   },
   {
     name: "CheckList",
-    role: "checklistcafe",
+    role: "United kingdom",
     img: "https://i.ibb.co/WxwL4gG/cc-icon-yellow.jpg",
     description: (
       <p>
         {``}
         <Highlight>Great service and quality work as always.</Highlight>{" "}
-       
       </p>
     ),
   },
   {
-    name: "Jake Morrison",
-    role: "CTO at SecureNet Tech",
-    img: "https://randomuser.me/api/portraits/men/25.jpg",
+    name: "Dankoe",
+    role: "Writer",
+    img: "https://i.ibb.co/rt6fqct/channels4-profile.jpg",
     description: (
       <p>
-        {`With #CyberShield's AI-powered security systems, our data protection
-        levels are unmatched.`}
-        <Highlight>Ensuring safety and trust in digital spaces.</Highlight>{" "}
-        Redefining cybersecurity standards.
+        {` FramebyFrame took my animations up a notch. People see me in real life and say `}
+        <Highlight>{`"hey, you're the guy with the black and white animations!"`}</Highlight>{" "}
+        The animations made my content and profile stand out from everyone else
+        posting the same old boring stuff. Thank you FramebyFrame.
       </p>
     ),
   },
   {
-    name: "Nadia Ali",
-    role: "Product Manager at Creative Solutions",
-    img: "https://randomuser.me/api/portraits/women/78.jpg",
+    name: "Justin Scott",
+    role: "Writer",
+    img: "https://i.ibb.co/r3r3t4c/download.jpg",
     description: (
       <p>
-        {` #DesignPro's AI has streamlined our creative process, enhancing
-        productivity and innovation.`}
-        <Highlight>Bringing creativity and technology together.</Highlight> A
-        game-changer for creative industries.
+        {`They is a fantastic designer with great animation skills and inspirational ideas!`}
+        <Highlight>
+          The communication is fast and he is reliable in timings.
+        </Highlight>{" "}
+        I am absolutely sure that we will work together again in a short time.
+        One of my best experiences!
       </p>
     ),
   },
   {
-    name: "Omar Farooq",
-    role: "Founder at Startup Hub",
-    img: "https://randomuser.me/api/portraits/men/54.jpg",
+    name: "Project Kim",
+    role: "Entrepreneur",
+    img: "https://i.ibb.co/SKQCp3h/images.jpg",
     description: (
       <p>
-        {` #VentureAI's insights into startup ecosystems have been invaluable for
-        our growth and funding strategies.`}
-        <Highlight>Empowering startups with data-driven decisions.</Highlight> A
-        catalyst for startup success.
+        {`FramebyFrame really wanted my business up front. They worked with me on five revisions to make sure it was what I wanted. `}
+        <Highlight>
+          It would have been nice to have a higher resolution in the 2d
+          animation they used.
+        </Highlight>{" "}
+        But for the price, I feel like I got what I paid for, considering the
+        time they put into it. I would recommend working with them.
       </p>
     ),
   },

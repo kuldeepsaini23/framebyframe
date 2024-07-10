@@ -97,7 +97,7 @@ const Hero = (props: Props) => {
             <BookCall />
 
             <Button variant={"outline"} className="z-20">
-              <Link href={"/#portfolio"}>Learn More</Link>
+              <Link href={"/#faq"}>Learn More</Link>
             </Button>
           </div>
         </div>

@@ -1,4 +1,7 @@
+import MagicButton from "@/components/common/MagicButton";
+import { Button } from "@/components/ui/button";
 import Marquee from "@/components/ui/marquee";
+import Link from "next/link";
 
 const firstRowData = [
   {
@@ -314,6 +317,14 @@ const MarqueeDemo = () => {
       className="relative flex h-full w-full flex-col gap-y-20 items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl"
       id="portfolio"
     >
+      <Link href={"https://www.youtube.com/channel/UCuDLpr96vn9PI7_eYzjTy1A"} target="_blank">
+      <MagicButton
+      title="Portfolio"
+      otherClasses="sm:text-xl text-base"
+      divClassName="sm:h-12 sm:w-36"
+     />
+      </Link>
+     
       <Marquee pauseOnHover className="[--duration:30s]">
         {firstRowData.map((review, idx) => (
           <ReviewCard key={idx} {...review} />
@@ -330,6 +341,7 @@ const MarqueeDemo = () => {
           <ReviewCard key={idx} {...review} />
         ))}
       </Marquee>
+
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
     </div>

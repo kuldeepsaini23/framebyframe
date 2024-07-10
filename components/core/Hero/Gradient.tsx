@@ -37,7 +37,7 @@ const Gradient = (props: Props) => {
     <>
      {gradients.map((gradient) => (
         <motion.div
-          className="h-[350px] overflow-visible rounded-full absolute left-[40%] -bottom- w-[350px] flex-none"
+          className="h-[350px] overflow-visible rounded-full absolute left-[40%] -bottom-[30%] w-[350px] flex-none"
           style={{
             transform: `rotate(${gradient.initialRotation}deg) translateX(0px) translateY(0px) scale(1) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)`,
             filter: `blur(${gradient.blur}px)`,
@@ -55,7 +55,7 @@ const Gradient = (props: Props) => {
           <motion.div
             className="absolute inset-0 rounded-full"
             style={{
-              transform: `translateX(0px) translateY(0px) scale(0) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)`,
+              transform: `translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)`,
               opacity: gradient.opacity,
             }}
             // animate={{

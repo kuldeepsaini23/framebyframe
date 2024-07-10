@@ -11,14 +11,19 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { BookForm } from "./BookForm";
+import MagicButton from "@/components/common/MagicButton";
 
 export function BookCall() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button className="bg-[#FE4433] text-white hover:bg-red-600 z-20">
+        <MagicButton 
+          title="Book a call"
+          otherClasses="text-white hover:bg-[#FE4433]"
+        />
+        {/* <Button className="bg-[#FE4433] text-white hover:bg-red-600">
           Book a call
-        </Button>
+        </Button> */}
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">

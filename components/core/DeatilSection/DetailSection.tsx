@@ -35,11 +35,11 @@ const DetailSection = (props: Props) => {
       {/* Cards */}
       <div className="flex justify-center items-center gap-6 flex-wrap py-20">
         {socialMedia?.map((item, index) => (
-          <ShimmerButton
+          <div
             key={index}
             className="p-6 flex flex-col items-center justify-center gap-1 rounded-xl px-10 border border-[rgba(255,255,255,0.32)]"
           >
-            <p className="text-3xl sm:text-6xl font-semibold text-white">
+            <p className="text-3xl sm:text-7xl font-semibold text-white">
               <NumberTicker value={item?.SocialMediaCount} />
               {item.PrefixAfterCount}
             </p>
@@ -49,7 +49,7 @@ const DetailSection = (props: Props) => {
               {item.BottomText}
             </div>
            
-          </ShimmerButton>
+          </div>
         ))}
       </div>
       

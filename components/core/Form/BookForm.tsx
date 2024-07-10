@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -33,6 +33,8 @@ export function BookForm() {
   const { reset } = useForm();
   const { toast } = useToast();
 
+  const [submitting, setSubmitting] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,6 +50,7 @@ export function BookForm() {
     try {
       // Do something with the form values.
       // ✅ This will be type-safe and validated.
+      setSubmitting(true);
       setLoading(true);
       const res = await fetch("/api/book-call", {
         method: "POST",
@@ -68,8 +71,7 @@ export function BookForm() {
           email: "",
           phoneNo: "",
         });
-      }
-      else{
+      } else {
         throw new Error("Failed to submit form.");
       }
     } catch (error) {
@@ -77,6 +79,9 @@ export function BookForm() {
       toast({ title: "Try again later.", variant: "destructive" });
     } finally {
       setLoading(false);
+      setTimeout(() => {
+        setSubmitting(false);
+      }, 1000 * 60 * 60 * 12);
     }
   }
 
@@ -131,10 +136,16 @@ export function BookForm() {
         />
         <Button
           type="submit"
-          disabled={loading}
+          disabled={loading || submitting}
           className="bg-[#FE4433] text-white hover:bg-red-600 w-full"
         >
-          {loading ? <Loader2 className="animate-spin" /> : "Submit"}
+          {loading ? (
+            <Loader2 className="animate-spin" />
+          ) : submitting ? (
+            "Submit After 12 hours"
+          ) : (
+            "Submit"
+          )}
         </Button>
       </form>
     </Form>

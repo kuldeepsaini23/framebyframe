@@ -88,3 +88,37 @@
 .grad{
   background: radial-gradient(#ee6f07, #ffffff);
 }
+
+
+.circle1{
+  width: 300px;
+  height: 300px;
+  display: block;
+  background: conic-gradient(from 0deg at 50% 50%, #ffd9ad 0deg, #139ce5 180deg, #fd864d 360deg);
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+}
+
+
+.circle2{
+  width: 300px;
+height: 300px;
+display: block;
+background: conic-gradient(from 0deg at 50% 50%, #ffd9ad 0deg, #139ce5 180deg, #fd864d 360deg);
+overflow: hidden;
+position: absolute;
+border-radius: 50%;
+}
+
+.circle3{
+  width: 400px;
+height: 400px;
+display: block;
+background: conic-gradient(from 0deg at 50% 50%, #ff0000 0deg, hsl(354, 100%, 50%) 54.89161972682219deg, #00a6ff 106.69924423399361deg, #4797ff 162deg, #04f 252.00000000000003deg, #ff8000 306.00000000000006deg, hsl(0, 100%, 50%) 360deg);
+overflow: hidden;
+opacity: 0.8;
+position: absolute;
+border-radius: 50%;
+}
+

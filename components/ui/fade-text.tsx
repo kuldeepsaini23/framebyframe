@@ -52,6 +52,7 @@ export function FadeText({
       animate="show"
       viewport={{ once: true }}
       variants={FADE_ANIMATION_VARIANTS}
+      className="z-10"
     >
       <motion.span className={className}>{text}</motion.span>
     </motion.div>

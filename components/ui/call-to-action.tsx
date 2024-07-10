@@ -7,39 +7,39 @@ import Image from "next/image";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "safety1609",
+    username: "@safety1609",
+    body: "I would highly recommend Aniverse. Helpful?",
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    name: "checklistcafe",
+    username: "@checklistcafe",
+    body: "Great work and service, as always.",
     img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "tes_samuel",
+    username: "@tes_samuel",
+    body: "Very happy with the final result. Thank you!",
     img: "https://avatar.vercel.sh/john",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "davidgerber862",
+    username: "@davidgerber862",
+    body: "This is our second time working with Aniverse and the experience was excellent again. ",
     img: "https://avatar.vercel.sh/jane",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "alessandro_coz",
+    username: "@alessandro_coz",
+    body: "Loved working with Aniverse. ",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "rougekez",
+    username: "@rougekez",
+    body: "Really great result. Will definitely use again.",
     img: "https://avatar.vercel.sh/james",
   },
 ];
@@ -155,7 +155,7 @@ export function CallToAction() {
                 Ready to scale your brand to new heights?
               </h1>
               <p className="mt-4 text-lg max-w-[550px]">
-                {`If you want to achieve ground-breaking growth with increased sales and profitability with paid ads, then you're in the right place.`}
+                {`If you're aiming for ground-breaking growth, higher sales, and increased profitability through compelling video and animation, you're in the right place.`}
               </p>
               <div className="mt-4">
                 <BookCall />

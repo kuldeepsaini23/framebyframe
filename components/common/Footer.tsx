@@ -61,7 +61,7 @@ export function Footer() {
     // Reset the subscribed status after 2 seconds
     setTimeout(() => {
       setIsSubscribed(false);
-    }, 5000);
+    }, 1000 * 60 * 60 * 24);
     try {
       // Do something with the form values.
       // ✅ This will be type-safe and validated.

@@ -29,7 +29,8 @@ export async function POST(req: NextRequest) {
         await transporter.sendMail({
           from: `FrameByFrame <${process.env.MAIL_USER}>`,
           to: [
-            `FrameByFrame <${process.env.MAIL_USER}>`,
+            `FrameByFrame <${process.env.EMAIL_FRAME1}>,
+            FrameByFrame <${process.env.EMAIL_FRAME2}>`,
             `${body.email}`,
           ],
           subject: `CodeHelp Website: ${body.subject}`,

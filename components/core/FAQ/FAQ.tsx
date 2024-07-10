@@ -12,50 +12,50 @@ const faqs = [
     section: "General",
     qa: [
       {
-        question: "Why wouldn't I just hire a full-time designer?",
+        question: "What types of motion graphics services do you offer?",
         answer: (
           <span>
-           {`Good question. For starters, the annual cost of a full-time senior-level designer is around $100,000 plus benefits. (And trying to find one available is a hassle in itself.) Aside from that, you may not always have enough work to keep them busy all the time, so you;re stuck paying for time you aren't able to utilize.   With the monthly plan, you can pause and resume your subscription as often as you need to ensure you're only paying your designer when you have work available for them.`}
+           {`At FrameByFrame, we specialize in creating dynamic motion graphics that include, Explainers, animated logos, infographics, title sequences, and promotional videos. Our team can bring your brand to life with custom animations tailored to your specific needs.`}
           </span>
         ),
       },
       {
-        question: "Is there a limit to how many requests I can have?",
+        question: "How does the video editing process work?",
         answer: (
           <span>
-           {`Nope! When we say unlimited, we mean unlimited. Once you've susbcribed, you can add as many design requests to your queue as you'd like and they'll be delivered one by one.`} 
+           {`Our video editing process starts with an initial consultation to understand your project requirements. Once we have your raw footage, our skilled editors will craft a compelling narrative, enhance the visual quality, add special effects, and finalize the video with professional-grade audio and color correction. We'll keep you updated with drafts and incorporate your feedback to ensure the final product meets your expectations.`} 
           </span>
         ),
       },
       {
-        question: "How fast will I receive my designs?",
+        question: "What are explainer videos and how can they benefit my business?",
         answer: (
           <span>
-           {`On average, most requests are completed in 2-3 days. However, mroe complex requests can take longer.`} 
+           {`Explainer videos are short, engaging videos that explain your product, service, or concept in a clear and concise manner. They can help simplify complex ideas, capture your audience's attention, and increase engagement. These videos are perfect for marketing, training, onboarding, and more. FrameByFrame creates customized explainer videos that align with your brand and communicate your message effectively.`} 
           </span>
         ),
       },
       {
-        question: "Who are the designers?",
+        question: "Can you create short-form content for social media platforms?",
         answer: (
           <span>
-           {`You'll be working directly with me, Hamza Ehsan, founder of Productize. However, special requests such as animations or custom illustrations are provided by partner designers.`} 
+           {`Yes, we specialize in creating short-form content optimized for various social media platforms like Instagram, TikTok, Facebook, and YouTube. Whether you need attention-grabbing ads, quick tips, or engaging stories, our team can produce content that resonates with your audience and boosts your online presence.`} 
           </span>
         ),
       },
       {
-        question: "What if I don't like the design?",
+        question: "How long does it typically take to complete a project?",
         answer: (
           <span>
-           {`No worries! We'll continue to revise the design until you're 100% satisfied.`} 
+           {`The timeline for completing a project varies depending on the complexity and scope. On average, a simple video edit may take 3-7 days, while more intricate projects like motion graphics or explainer videos can take 10-15 days. We always strive to meet your deadlines and will provide a more accurate timeline after discussing your specific requirements.`} 
           </span>
         ),
       },
       {
-        question: "Are there any refunds if I don't like the service?",
+        question: "What file formats will I receive upon project completion?",
         answer: (
           <span>
-           {`Due to the high-quality nature of the work, there will be no refunds issued.`} 
+           {`Upon completion of your project, we will deliver the final video in the format of your choice, typically in high-definition MP4 or MOV formats. If you have specific format requirements for different platforms or purposes, please let us know, and we'll accommodate your needs. Additionally, we can provide raw files and other assets upon request.`} 
           </span>
         ),
       },

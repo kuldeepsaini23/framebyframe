@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import WordPullUp from "@/components/ui/word-pull-up";
 
 export const Highlight = ({
   children,
@@ -53,11 +54,11 @@ export const TestimonialCard = ({
     <div className="select-none text-sm font-normal text-neutral-700 dark:text-neutral-400">
       {description}
       <div className="flex flex-row py-1">
-        <Star className="size-4 text-yellow-500" />
-        <Star className="size-4 text-yellow-500" />
-        <Star className="size-4 text-yellow-500" />
-        <Star className="size-4 text-yellow-500" />
-        <Star className="size-4 text-yellow-500" />
+        <Star className="size-4 fill-yellow-500" />
+        <Star className="size-4 fill-yellow-500" />
+        <Star className="size-4 fill-yellow-500" />
+        <Star className="size-4 fill-yellow-500" />
+        <Star className="size-4 fill-yellow-500" />
       </div>
     </div>
 
@@ -80,67 +81,64 @@ export const TestimonialCard = ({
 
 const testimonials = [
   {
-    name: "Alex Rivera",
-    role: "CTO at InnovateTech",
-    img: "https://randomuser.me/api/portraits/men/91.jpg",
+    name: "Boubleon",
+    role: "France",
+    img: "https://i.ibb.co/kBNjgWr/fb402323-2a0b-4a1a-a5c5-5ba62f77d399.webp",
     description: (
       <p>
-        The AI-driven analytics from #QuantumInsights have revolutionized our
-        product development cycle.
-        <Highlight>
-          Insights are now more accurate and faster than ever.
-        </Highlight>{" "}
-        A game-changer for tech companies.
+        I asked for several revisions,
+        <Highlight>I had specific criteria and he met them.</Highlight> This is
+        exactly the kind of behavior I expect from someone serious and
+        professional. I recommend him.
       </p>
     ),
   },
   {
     name: "Samantha Lee",
-    role: "Marketing Director at NextGen Solutions",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    role: "Uniited States",
+    img: "https://i.ibb.co/JCC61yZ/fb402323-2a0b-4a1a-a5c5-5ba62f77d399.webp",
     description: (
       <p>
-        {` Implementing #AIStream's customer prediction model has drastically
-        improved our targeting strategy.`}
-        <Highlight>Seeing a 50% increase in conversion rates!</Highlight> Highly
-        recommend their solutions.
+        {`Really satisfied and surprised with the result.`}
+        <Highlight>Mashab is a really expert creator.</Highlight> Highly Just a
+        few questions, a quick chat and he delivered a piece of art in just a
+        few days. More than recommended, smart and skilled.
       </p>
     ),
   },
   {
     name: "Raj Patel",
-    role: "Founder & CEO at StartUp Grid",
+    role: " United States",
     img: "https://randomuser.me/api/portraits/men/45.jpg",
     description: (
       <p>
-        {`As a startup, we need to move fast and stay ahead. #CodeAI's automated
-        coding assistant helps us do just that.`}
-        <Highlight>Our development speed has doubled.</Highlight> Essential tool
-        for any startup.
+        {`As a startup, we need to move fast and stay ahead. #framebyframe helps us do just that.`}
+        <Highlight>Our business speed has doubled.</Highlight> Essential videos
+        to boost your business.
       </p>
     ),
   },
   {
-    name: "Emily Chen",
-    role: "Product Manager at Digital Wave",
+    name: "Vatesoro",
+    role: "Canada",
     img: "https://randomuser.me/api/portraits/women/83.jpg",
     description: (
       <p>
-        {`  #VoiceGen's AI-driven voice synthesis has made creating global products
-        a breeze.`}
-        <Highlight>Localization is now seamless and efficient.</Highlight> A
-        must-have for global product teams.
+        {` I'm really satisfied with the overall experience and final product. I created the script and a quick storyboard and they hopped on a call to walk through it with me to ensure he understood the work. They took my feedback well and when I needed revisions but wasn't sure how to bring my vision to life,`}
+        <Highlight>I gave him creative reign and he was awesome.</Highlight> A I
+        had a tight timeline and worked with me to try and achieve it. My
+        clients are thrilled with the results and so am I. I will definitely
+        work with him again!
       </p>
     ),
   },
   {
-    name: "Michael Brown",
-    role: "Data Scientist at FinTech Innovations",
+    name: "David Gerber",
+    role: "United States",
     img: "https://randomuser.me/api/portraits/men/1.jpg",
     description: (
       <p>
-        {` Leveraging #DataCrunch's AI for our financial models has given us an
-        edge in predictive accuracy.`}
+        {`Excellent work. I enjoyed the opportunity to work with Framebyframe. They asked great questions and really understood what we were trying to create. They took feedback well and challenged us where he had conviction, which we appreciated. The work was done on time and the final product was excellent. We will work with him again.`}
         <Highlight>
           Our investment strategies are now powered by real-time data analytics.
         </Highlight>{" "}
@@ -149,61 +147,62 @@ const testimonials = [
     ),
   },
   {
-    name: "Linda Wu",
-    role: "VP of Operations at LogiChain Solutions",
+    name: "Lucia Sage",
+    role: "New Zealand",
     img: "https://randomuser.me/api/portraits/women/5.jpg",
     description: (
       <p>
-        {`#LogiTech's supply chain optimization tools have drastically reduced our
-        operational costs.`}
+        {`Seller was very cooperative and clear in their intentions and design.  `}
         <Highlight>
-          Efficiency and accuracy in logistics have never been better.
+          The artstyle is clean and understandable with a friendly note to it.
         </Highlight>{" "}
+        Ordering was a simple process and the animator was ok with tailoring our
+        order to our needs.
       </p>
     ),
   },
   {
-    name: "Carlos Gomez",
-    role: "Head of R&D at EcoInnovate",
+    name: "Solveta",
+    role: "Germany",
     img: "https://randomuser.me/api/portraits/men/14.jpg",
     description: (
       <p>
-        {` By integrating #GreenTech's sustainable energy solutions, we've seen a
-        significant reduction in carbon footprint.`}
+        {`They are a fantastic designer with great animation skills and inspirational ideas!`}
         <Highlight>
-          Leading the way in eco-friendly business practices.
+          The communication is fast and he is reliable in timings.
         </Highlight>{" "}
-        Pioneering change in the industry.
+        I am absolutely sure that we will work together again in a short time.
+        One of my best Fiverr experiences!
       </p>
     ),
   },
   {
-    name: "Aisha Khan",
-    role: "Chief Marketing Officer at Fashion Forward",
+    name: "St_imagine",
+    role: "Canada",
     img: "https://randomuser.me/api/portraits/women/56.jpg",
     description: (
       <p>
-        {`#TrendSetter's market analysis AI has transformed how we approach
-        fashion trends.`}
+        {`FramebyFrame is prompt in communication and skilled in animation. The work that they did was fantastic and really captured the feeling of the video we were trying to create.`}
         <Highlight>
-          Our campaigns are now data-driven with higher customer engagement.
+          They were able to take our script and turn it into a beautiful
+          animation within a short period of time.
         </Highlight>{" "}
-        Revolutionizing fashion marketing.
+        We would definitely recommend them to anyone looking for quality
+        animation work.
       </p>
     ),
   },
   {
-    name: "Tom Chen",
+    name: "Tashrw",
     role: "Director of IT at HealthTech Solutions",
     img: "https://randomuser.me/api/portraits/men/18.jpg",
     description: (
       <p>
-        Implementing #MediCareAI in our patient care systems has improved
-        patient outcomes significantly.
-        <Highlight>
-          Technology and healthcare working hand in hand for better health.
-        </Highlight>{" "}
-        A milestone in medical technology.
+        This was a brilliant job! They was helpful, made changes I needed
+        without any fuss and delivered a fantastic animated explainer video.
+        <Highlight>absolutely recommend FramebyFrame!</Highlight> I
+        Communication is quick and he delivers exactly what you need, with
+        suggestions that make it even better.
       </p>
     ),
   },
@@ -266,9 +265,11 @@ export function SocialProofTestimonials() {
     <section id="testimonials">
       <div className="py-14">
         <div className="container mx-auto px-4 md:px-8">
-          <h3 className="text-center text-2xl sm:text-6xl font-bold text-white">
-            TESTIMONIALS
-          </h3>
+          <WordPullUp
+            className="text-center text-2xl sm:text-6xl font-bold text-white"
+            words="Word From Client"
+          />
+
           <div className="relative mt-6 max-h-[650px] overflow-hidden">
             <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-transparent">
               {Array(Math.ceil(testimonials.length / 3))

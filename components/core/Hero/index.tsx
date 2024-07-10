@@ -81,7 +81,7 @@ const Hero = (props: Props) => {
 
           {/* Heading */}
           <WordPullUp
-            className="text-[#FCFCFA] text-5xl font-bold text-left z-10"
+            className="text-[#FCFCFA] text-5xl font-bold text-left"
             words="Elevate your brand with stunning videos."
           />
 

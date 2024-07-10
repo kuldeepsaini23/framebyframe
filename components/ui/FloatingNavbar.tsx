@@ -101,7 +101,10 @@ export const FloatingNav = ({
             </Link>
           ))}
           {/* remove this login btn */}
-          <BookCall />
+     
+          <BookCall nav={true}/>
+          
+         
         </motion.div>
       </AnimatePresence>
 
@@ -143,7 +146,7 @@ export const FloatingNav = ({
                 </span>
               </Link>
             ))}
-             <BookCall />
+             <BookCall nav={true}/>
           </ul>
          
         </div>

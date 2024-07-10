@@ -13,17 +13,18 @@ import {
 import { BookForm } from "./BookForm";
 import MagicButton from "@/components/common/MagicButton";
 
-export function BookCall() {
+export function BookCall({ nav = false }: { nav?: boolean }) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <MagicButton 
-          title="Book a call"
-          otherClasses="text-white hover:bg-[#FE4433]"
-        />
-        {/* <Button className="bg-[#FE4433] text-white hover:bg-red-600">
-          Book a call
-        </Button> */}
+        {nav ? (
+          <Button className="bg-[#FE4433] text-white hover:bg-[#ff4a3a]">Book a call</Button>
+        ) : (
+          <MagicButton
+            title="Book a call"
+            otherClasses="text-white hover:bg-[#FE4433]"
+          />
+        )}
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">

@@ -1,14 +1,13 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,8 +15,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { useState } from "react";
-import { Loader, Loader2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -26,7 +25,7 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Invalid email address.",
   }),
-  phoneNo: z.string(),
+  phoneNo: z.string().optional(),
 });
 
 export function BookForm() {
@@ -34,8 +33,8 @@ export function BookForm() {
   const { toast } = useToast();
 
   const [submitting, setSubmitting] = useState(false);
-
   const [loading, setLoading] = useState(false);
+  const [canSubmit, setCanSubmit] = useState(true);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,10 +45,21 @@ export function BookForm() {
     },
   });
 
+  useEffect(() => {
+    const submissionTime = localStorage.getItem("submissionTime");
+    if (submissionTime) {
+      const elapsedTime = Date.now() - parseInt(submissionTime, 10);
+      if (elapsedTime < 12 * 60 * 60 * 1000) { // 12 hours in milliseconds
+        setCanSubmit(false);
+        setTimeout(() => {
+          setCanSubmit(true);
+        }, 12 * 60 * 60 * 1000 - elapsedTime);
+      }
+    }
+  }, []);
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Do something with the form values.
-      // ✅ This will be type-safe and validated.
       setSubmitting(true);
       setLoading(true);
       const res = await fetch("/api/book-call", {
@@ -60,17 +70,18 @@ export function BookForm() {
         },
       });
 
-      // Log the response status
-      // console.log("RES: ", res);
-
       if (res.ok) {
         toast({ title: "Form submitted successfully." });
-        // Reset the form
+        localStorage.setItem("submissionTime", Date.now().toString());
         reset({
           name: "",
           email: "",
           phoneNo: "",
         });
+        setCanSubmit(false);
+        setTimeout(() => {
+          setCanSubmit(true);
+        }, 12 * 60 * 60 * 1000); // 12 hours in milliseconds
       } else {
         throw new Error("Failed to submit form.");
       }
@@ -79,9 +90,7 @@ export function BookForm() {
       toast({ title: "Try again later.", variant: "destructive" });
     } finally {
       setLoading(false);
-      setTimeout(() => {
-        setSubmitting(false);
-      }, 1000 * 60 * 60 * 12);
+      setSubmitting(false);
     }
   }
 
@@ -97,9 +106,6 @@ export function BookForm() {
               <FormControl>
                 <Input placeholder="Enter your name" {...field} />
               </FormControl>
-              {/* <FormDescription>
-                This is your public display name.
-              </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -113,9 +119,6 @@ export function BookForm() {
               <FormControl>
                 <Input placeholder="Enter your email" {...field} />
               </FormControl>
-              {/* <FormDescription>
-                This is your public display name.
-              </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -129,19 +132,18 @@ export function BookForm() {
               <FormControl>
                 <Input placeholder="Enter your Phone No" {...field} />
               </FormControl>
-              <FormDescription>This is optional field.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button
           type="submit"
-          disabled={loading || submitting}
+          disabled={!canSubmit || loading || submitting}
           className="bg-[#FE4433] text-white hover:bg-red-600 w-full"
         >
           {loading ? (
             <Loader2 className="animate-spin" />
-          ) : submitting ? (
+          ) : !canSubmit ? (
             "Submit After 12 hours"
           ) : (
             "Submit"

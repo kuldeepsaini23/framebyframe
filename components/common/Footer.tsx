@@ -50,31 +50,45 @@ export function Footer() {
     }
     handleapi();
   }, []);
+  
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [canSubmit, setCanSubmit] = useState(true);
+
+  useEffect(() => {
+    const submissionTime = localStorage.getItem("contactSubmissionTime");
+    if (submissionTime) {
+      const elapsedTime = Date.now() - parseInt(submissionTime, 10);
+      if (elapsedTime < 24 * 60 * 60 * 1000) { // 24 hours in milliseconds
+        setCanSubmit(false);
+        setTimeout(() => {
+          setCanSubmit(true);
+        }, 24 * 60 * 60 * 1000 - elapsedTime);
+      }
+    }
+  }, []);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     console.log("Email submitted:", email);
     setEmail("");
     setIsSubscribed(true);
-    // Reset the subscribed status after 2 seconds
+    localStorage.setItem("contactSubmissionTime", Date.now().toString());
+    setCanSubmit(false);
     setTimeout(() => {
       setIsSubscribed(false);
-    }, 1000 * 60 * 60 * 24);
-    try {
-      // Do something with the form values.
-      // ✅ This will be type-safe and validated.
+      setCanSubmit(true);
+    }, 1000 * 60 * 60 * 24); // 24 hours in milliseconds
 
+    try {
       const res = await fetch("/api/contact-us", {
         method: "POST",
-        body: JSON.stringify(email),
+        body: JSON.stringify({ email }),
         headers: {
           "Content-Type": "application/json",
         },
       });
 
-      // Log the response status
       console.log("RES: ", res);
 
       if (!res.ok) {
@@ -119,7 +133,7 @@ export function Footer() {
           </p>
         </div>
         <div className="pt-5 md:w-1/2">
-          <div className="flex items-center justify-between gap-x-3 lg:pl-10">
+          <div className="flex items-center justify-between gap-4 flex-wrap lg:pl-10">
             {footerLinks.map((column, columnIndex) => (
               <ul key={columnIndex} className="flex flex-col gap-y-2">
                 {column.map((link) => (
@@ -153,14 +167,14 @@ export function Footer() {
                     required
                   />
 
-                  <Button variant={"outline"}>
-                    {isSubscribed ? "We will get soon" : "Contact Us"}
+                  <Button variant={"outline"} disabled={!canSubmit}>
+                    {isSubscribed ? "We will get back to you soon" : "Contact Us"}
                   </Button>
                 </form>
               </div>
             </div>
 
-            <div className="flex items-center flex-col gap-y-4">
+            <div className="flex items-center sm:flex-col gap-4">
               {icons.map((icon, index) => (
                 <a
                   key={index}
@@ -174,8 +188,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
     </footer>
   );
 }

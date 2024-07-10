@@ -9,7 +9,7 @@ const reviews = [
   {
     name: "safety1609",
     username: "@safety1609",
-    body: "I would highly recommend Aniverse. Helpful?",
+    body: "I would highly recommend FramebyFrame. Very Helpful!",
     img: "https://avatar.vercel.sh/jack",
   },
   {
@@ -27,13 +27,13 @@ const reviews = [
   {
     name: "davidgerber862",
     username: "@davidgerber862",
-    body: "This is our second time working with Aniverse and the experience was excellent again. ",
+    body: "This is our second time working with FramebyFrame and the experience was excellent again. ",
     img: "https://avatar.vercel.sh/jane",
   },
   {
     name: "alessandro_coz",
     username: "@alessandro_coz",
-    body: "Loved working with Aniverse. ",
+    body: "Loved working with FramebyFrame. ",
     img: "https://avatar.vercel.sh/jenny",
   },
   {

@@ -1,56 +1,88 @@
 import { NextRequest, NextResponse } from "next/server";
-import {createTransport} from "nodemailer";
+import { createTransport } from "nodemailer";
 
 export async function POST(req: NextRequest) {
-    const body = await req.json();
-    // console.log("Body: ",body);
-    const message = `
-    <p>New message from FrameByFrame <a href='https://www.codehelp.in/contact'>CodeHelp Website</a></p>
-    <h3>Contact Details:</h3>
+  const body = await req.json();
+  // console.log("Body: ",body);
+  const message = `
+    <p>Dear ${body.name}</p>
+    <p>Thank you for contacting us through our website. We appreciate your interest and will get back to you as soon as possible.</p>
+    <p>
+To ensure we can respond to you in the most convenient way, please let us know your preferred platform for communication. Whether it's WhatsApp, email, phone call, or any other platform, please provide the relevant contact details.</p>
+    <h3>Your Contact Details:</h3>
     <ul>
       <li><b>Name:</b> ${body.name}</li>
       <li><b>Email:</b> ${body.email}</li>
       <li><b>Mobile Number:</b> ${body.phoneNo}</li>
     </ul>
-    <h3>Message:</h3>
-    <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.MAIL_USER}'>${process.env.MAIL_USER}</a></b></code>
+    <p>Thank you for reaching out to us. We look forward to speaking with you.</p>
+    <code>To reply to this message, please use this email address: <b><a href='mailto:${process.env.EMAIL_CONTACT}'>${process.env.EMAIL_CONTACT}</a></b></code>
   `;
 
-    try {
-        let transporter = createTransport({
-          host: process.env.MAIL_HOST,
-          auth: {
-            user: process.env.MAIL_USER,
-            pass: process.env.MAIL_PASS,
-          },
-          secure: false,
-        });
-    
-        await transporter.sendMail({
-          from: `FrameByFrame <${process.env.EMAIL_FRAME3}>`,
-          to: [ 
-            
-            `${body.email}`,
-          ],
-          subject: `CodeHelp Website: ${body.subject}`,
-          html: message.replace(/\r\n/g, "<br>"),
-        });
+  const clientDetails = `
+    <h3>Contact Details of Client:</h3>
+    <ul>
+      <li><b>Name:</b> ${body.name}</li>
+      <li><b>Email:</b> ${body.email}</li>
+      <li><b>Mobile Number:</b> ${body.phoneNo}</li>
+    </ul>
+  `;
 
-    } catch (error) {
-        console.log("Error: ", error);
-        return NextResponse.json(
-          { success: false, message: "Failed to send email." },
-          { status: 500 }
-        );
-    }
+  try {
+    let transporter = createTransport({
+      host: process.env.MAIL_HOST,
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+      secure: false,
+    });
 
-    const response = NextResponse.json(
-        { success: true, message: "OK" },
-        { status: 200 }
-      );
-      return response;
+    await transporter.sendMail({
+      from: `FrameByFrame <${process.env.MAIL_USER}>`,
+      to: [`${body.email}`],
+      subject: `Thank You for Reaching Out!`,
+      html: message.replace(/\r\n/g, "<br>"),
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    return NextResponse.json(
+      { success: false, message: "Failed to send email." },
+      { status: 500 }
+    );
+  }
+
+  try {
+    let transporter = createTransport({
+      host: process.env.MAIL_HOST,
+      auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+      },
+      secure: false,
+    });
+
+    await transporter.sendMail({
+      from: `FrameByFrame <${process.env.MAIL_USER}>`,
+      to: [
+        `<${process.env.EMAIL_FRAME1}>,
+  <${process.env.EMAIL_FRAME2}>`,
+        "techbro2311@gmail.com",
+      ],
+      subject: `A new Client Reach out to us`,
+      html: clientDetails.replace(/\r\n/g, "<br>"),
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    return NextResponse.json(
+      { success: false, message: "Failed to send email." },
+      { status: 500 }
+    );
+  }
+
+  const response = NextResponse.json(
+    { success: true, message: "OK" },
+    { status: 200 }
+  );
+  return response;
 }
-
-
-// `FrameByFrame <${process.env.EMAIL_FRAME1}>,
-// FrameByFrame <${process.env.EMAIL_FRAME2}>`,

@@ -121,7 +121,7 @@ const testimonials = [
   {
     name: "Vatesoro",
     role: "Canada",
-    img: "https://randomuser.me/api/portraits/women/83.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=V",
     description: (
       <p>
         {` I'm really satisfied with the overall experience and final product. I created the script and a quick storyboard and they hopped on a call to walk through it with me to ensure he understood the work. They took my feedback well and when I needed revisions but wasn't sure how to bring my vision to life,`}
@@ -135,7 +135,7 @@ const testimonials = [
   {
     name: "David Gerber",
     role: "United States",
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
+    img: "https://i.ibb.co/M255KD8/image.png",
     description: (
       <p>
         {`Excellent work. I enjoyed the opportunity to work with Framebyframe. They asked great questions and really understood what we were trying to create. They took feedback well and challenged us where he had conviction, which we appreciated. The work was done on time and the final product was excellent. We will work with him again.`}
@@ -149,7 +149,7 @@ const testimonials = [
   {
     name: "Lucia Sage",
     role: "New Zealand",
-    img: "https://randomuser.me/api/portraits/women/5.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=LS",
     description: (
       <p>
         {`Seller was very cooperative and clear in their intentions and design.  `}
@@ -164,7 +164,7 @@ const testimonials = [
   {
     name: "Solveta",
     role: "Germany",
-    img: "https://randomuser.me/api/portraits/men/14.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=S",
     description: (
       <p>
         {`They are a fantastic designer with great animation skills and inspirational ideas!`}
@@ -179,7 +179,7 @@ const testimonials = [
   {
     name: "St_imagine",
     role: "Canada",
-    img: "https://randomuser.me/api/portraits/women/56.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=St",
     description: (
       <p>
         {`FramebyFrame is prompt in communication and skilled in animation. The work that they did was fantastic and really captured the feeling of the video we were trying to create.`}
@@ -195,7 +195,7 @@ const testimonials = [
   {
     name: "Tashrw",
     role: "Director of IT at HealthTech Solutions",
-    img: "https://randomuser.me/api/portraits/men/18.jpg",
+    img: "https://api.dicebear.com/9.x/initials/svg?seed=T",
     description: (
       <p>
         This was a brilliant job! They was helpful, made changes I needed
@@ -207,15 +207,14 @@ const testimonials = [
     ),
   },
   {
-    name: "Sofia Patel",
-    role: "CEO at EduTech Innovations",
-    img: "https://randomuser.me/api/portraits/women/73.jpg",
+    name: "CheckList",
+    role: "checklistcafe",
+    img: "https://i.ibb.co/WxwL4gG/cc-icon-yellow.jpg",
     description: (
       <p>
-        {` #LearnSmart's AI-driven personalized learning plans have doubled student
-        performance metrics.`}
-        <Highlight>Education tailored to every {`learner's`} needs.</Highlight>{" "}
-        Transforming the educational landscape.
+        {``}
+        <Highlight>Great service and quality work as always.</Highlight>{" "}
+       
       </p>
     ),
   },

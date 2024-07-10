@@ -8,24 +8,24 @@ const gradients = [
   {
     id: "gradient1",
     colors:
-      "from 0deg at 50% 50%, rgb(255, 255, 255), rgb(19, 156, 229), rgb(13, 231, 180)",
-    opacity: 1,
+      "from 0deg at 50% 50%, #ffd9ad 0deg, #FA82A2 180deg, #fd864d 360deg",
+    opacity: 0.8,
     initialRotation: 100.44,
     blur: 32,
   },
   {
     id: "gradient2",
     colors:
-      "from 0deg at 50% 50%, rgb(255, 0, 0), rgb(255, 0, 0), rgb(20, 120, 90), rgb(11, 86, 63), rgb(11, 86, 63), rgb(13, 231, 180), rgb(255, 0, 0)",
-    opacity: 0.8,
+      "from 0deg at 50% 50%, #ffd9ad 0deg, #FA82A2 180deg, #fd864d 360deg",
+    opacity: 0.5,
     initialRotation: 211.44,
     blur: 70,
   },
   {
     id: "gradient3",
     colors:
-      "from 0deg at 50% 50%, rgb(255, 217, 173), rgb(11, 87, 64), rgb(13, 231, 180)",
-    opacity: 1,
+      "from 0deg at 50% 50%, #ffd9ad 0deg, #139ce5 180deg, #fd864d 360degfrom 0deg at 50% 50%, #ff0000 0deg, hsl(354, 100%, 50%) 54.89161972682219deg, #00a6ff 106.69924423399361deg, #4797ff 162deg, #04f 252.00000000000003deg, #ff8000 306.00000000000006deg, hsl(0, 100%, 50%) 360deg",
+    opacity: 0.8,
     initialRotation: 45.72,
     blur: 32,
   },
@@ -37,7 +37,7 @@ const Gradient = (props: Props) => {
     <>
      {gradients.map((gradient) => (
         <motion.div
-          className="h-[350px] overflow-visible rounded-full absolute left-[35%] top-1/4 w-[350px] flex-none"
+          className="h-[350px] overflow-visible rounded-full absolute left-[40%] -bottom- w-[350px] flex-none"
           style={{
             transform: `rotate(${gradient.initialRotation}deg) translateX(0px) translateY(0px) scale(1) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)`,
             filter: `blur(${gradient.blur}px)`,
@@ -58,9 +58,9 @@ const Gradient = (props: Props) => {
               transform: `translateX(0px) translateY(0px) scale(0) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)`,
               opacity: gradient.opacity,
             }}
-            animate={{
-              scale: [0.856133, 0.987, 0.856133], // Scale animation
-            }}
+            // animate={{
+            //   scale: [0.856133, 1.1, 0.856133], // Scale animation
+            // }}
             transition={{
               duration: 5, // Duration of the scale animation
               repeat: Infinity, // Repeat the animation infinitely

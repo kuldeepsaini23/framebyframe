@@ -267,7 +267,7 @@ export function SocialProofTestimonials() {
         <div className="container mx-auto px-4 md:px-8">
           <WordPullUp
             className="text-center text-2xl sm:text-6xl font-bold text-white"
-            words="Word From Client"
+            words="Words From Client"
           />
 
           <div className="relative mt-6 max-h-[650px] overflow-hidden">

@@ -23,11 +23,11 @@ const icons: Icon[] = [
   },
   {
     icon: <LinkedInLogoIcon width={30} height={30} />,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/framebyframe-media-0a3440319/",
   },
   {
     icon: <TwitterLogoIcon width={30} height={30} />,
-    url: "https://www.twitter.com",
+    url: "https://x.com/FramebyFrameM",
   },
 ];
 

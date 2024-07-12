@@ -23,12 +23,12 @@ export async function generateMetadata(
     metadataBase: new URL(
       process.env.SITE_URL || "https://www.framebyframe.media"
     ),
-    title: `Video Production Company | FramebyFrame`,
+    title: `Motion Design Studio | FramebyFrame`,
     description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!}`,
     keywords: ["FramebyFrame", "Editor"],
     openGraph: {
       images: "https://i.ibb.co/FX7HHx1/card.png",
-      title: `Video Production Company | FramebyFrame`,
+      title: `Motion Design Studio | FramebyFrame`,
       description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
 
       // type: `${courseData?.attributes?.seo?.OgMetaType}`,
@@ -36,7 +36,7 @@ export async function generateMetadata(
       siteName: "FramebyFrame",
     },
     twitter: {
-      title: `Video Production Company | FramebyFrame`,
+      title: `Motion Design Studio | FramebyFrame`,
       description: `Boost your business and content rapidly with our trending animations and video editing services. Schedule a free call or reach out via our social media channels to skyrocket your success!`,
       // card: `${courseData?.attributes?.seo?.TwitterMetaCard}`,
       card: "summary_large_image",
